@@ -6,16 +6,16 @@ public class TestThreadCheckArray {
 			Thread thread1, thread2;
 			System.out.println("Enter array size");
 			int num  = input.nextInt();
-			int [] array = new int[num];
+			int [] arraylist = new int[num];
 			System.out.println("Enter numbers for array");
 			
 			for (int index = 0; index < num; index++) 
-				array[index] = input.nextInt();
+				arraylist[index] = input.nextInt();
 			
 			System.out.println("Enter number");
 			num = input.nextInt();
 			
-			SharedData sd = new SharedData(array, num);
+			SharedData sd = new SharedData(arraylist, num);
 			
 			thread1 = new Thread(new ThreadCheckArray(sd), "thread1");
 			thread2 = new Thread(new ThreadCheckArray(sd), "thread2");
